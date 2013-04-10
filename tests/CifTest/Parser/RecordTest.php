@@ -13,4 +13,20 @@ class RecordTest extends \PHPUnit_Framework_TestCase {
         $this->assertEquals(1, $record->test);
     }
     
+    public function testToJson(){
+        $record = new Record;
+        $record->test = 1;
+        $record->sample = 2;
+        
+        $this->assertEquals('{"test":1,"sample":2}', $record->toJson());
+    }
+    
+    public function testToString(){
+        $record = new Record;
+        $record->test = 1;
+        $record->sample = 2;
+        
+        $this->assertEquals($record->toJson(), (string) $record);
+    }
+    
 }
