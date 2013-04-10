@@ -13,7 +13,7 @@ To include the parser in to your project using composer, add the following to yo
     ``` json
     {
         "require": {
-            "rb-cohen/php-cif-parser": "dev-master"
+            "rb-cohen/cif-parser": "dev-master"
         }
     }
     ```
