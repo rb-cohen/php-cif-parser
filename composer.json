@@ -1,5 +1,5 @@
 {
-    "name": "arron/cif-parser",
+    "name": "rb-cohen/cif-parser",
     "description": "A CIF parser for PHP",
     "authors": [
         {

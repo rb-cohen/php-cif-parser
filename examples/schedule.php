@@ -2,6 +2,17 @@
 
 $autoloader = require(__DIR__ . '/../vendor/autoload.php');
 
+$src = __DIR__ . '/schedule.cif';
+if (!file_exists($src)) {
+    echo "================================" . PHP_EOL;
+    echo "You need the schedule.cif file!!" . PHP_EOL;
+    echo "================================" . PHP_EOL;
+    echo "Please download the file from https://www.dropbox.com/s/7nsa4qsa5bdbnpf/schedule.cif" . PHP_EOL;
+    echo "Saving it to $src" . PHP_EOL . PHP_EOL;
+    exit(1);
+}
+
+
 $callback = function($record) {
             echo $record->identity;
         };
@@ -37,4 +48,4 @@ $parser->setRecordIdentityLength(2)
         ->addRecordTokenizer('TD', new \Cif\Parser\Tokenizer\Ignore())
         ->addRecordTokenizer('ZZ', new \Cif\Parser\Tokenizer\Stop())
         ->addRecordTokenizer('AA', $associations)
-        ->parseFile(__DIR__ . '/schedule.cif');
+        ->parseFile($src);
