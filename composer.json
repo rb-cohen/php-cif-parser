@@ -1,0 +1,17 @@
+{
+    "name": "arron/cif-parser",
+    "description": "A CIF parser for PHP",
+    "authors": [
+        {
+            "name": "Arron Woods",
+            "email": "me@arronwoods.com"
+        }
+    ],
+    "require": {
+    },
+    "autoload": {
+        "psr-0": {
+            "Cif": "src/"
+        }
+    }
+}
