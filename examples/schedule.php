@@ -1,6 +1,6 @@
 <?php
 
-$autoloader = require(__DIR__ . '/../vendor/autoload.php');
+$autoloader = require(__DIR__ . '/../init_autoload.php');
 
 $src = __DIR__ . '/schedule.cif';
 if (!file_exists($src)) {

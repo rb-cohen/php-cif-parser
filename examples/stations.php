@@ -1,6 +1,6 @@
 <?php
 
-$autoloader = require(__DIR__ . '/../vendor/autoload.php');
+$autoloader = require(__DIR__ . '/../init_autoload.php');
 
 $callback = function($record) {
             echo $record->identity;
